@@ -15,35 +15,35 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class ListeAdapter extends ArrayAdapter<Equipe> {
-    Context context;
+        public class ListeAdapter extends ArrayAdapter<Equipe> {
+            Context context;
 
-    public ListeAdapter(Context context, List<Equipe> listeEquipe){
-        super(context, -1, listeEquipe);
-        this.context = context;
-    }
+            public ListeAdapter(Context context, List<Equipe> listeEquipe){
+                super(context, -1, listeEquipe);
+                this.context = context;
+            }
 
-    public View getView(int position, View convertView, ViewGroup parent){
-        View view;
-        Equipe uneEquipe;
-        view = null;
+            public View getView(int position, View convertView, ViewGroup parent){
+                View view;
+                Equipe uneEquipe;
+                view = null;
 
-        if(convertView == null){
-            LayoutInflater layoutInflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.ligne, parent, false);
-        } else{
-            view = convertView;
-        }
+                if(convertView == null){
+                    LayoutInflater layoutInflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    view = layoutInflater.inflate(R.layout.ligne, parent, false);
+                } else{
+                    view = convertView;
+                }
 
-        uneEquipe = getItem(position);
-        TextView tvTitre1 = (TextView)view.findViewById(R.id.Titre1);
-        TextView tvTitre2 = (TextView)view.findViewById(R.id.Titre2);
-        ImageView imageView = (ImageView)view.findViewById(R.id.img1);
+                uneEquipe = getItem(position);
+                TextView tvTitre1 = (TextView)view.findViewById(R.id.Titre1);
+                TextView tvTitre2 = (TextView)view.findViewById(R.id.Titre2);
+                ImageView imageView = (ImageView)view.findViewById(R.id.img1);
 
-        tvTitre1.setText(uneEquipe.getNomE());
-        tvTitre2.setText(uneEquipe.getDescE());
+                tvTitre1.setText(uneEquipe.getNomE());
+                tvTitre2.setText(uneEquipe.getDescE());
 
-        AssetManager manager = context.getAssets();
+                AssetManager manager = context.getAssets();
 
         InputStream open = null;
 

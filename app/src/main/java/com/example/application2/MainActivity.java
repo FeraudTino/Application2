@@ -15,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Equipe>listeEquipe;
 
     Equipe e1 = new Equipe(1, "Avengers", "Super Héros Marvel", "avengers/Avengers.jpg");
-    Equipe e2 = new Equipe(1, "JLA", "Super Héros DC", "jla/jla.png");
-    Equipe e3 = new Equipe(1, "X-Men", "Super Héros Mutants", "xmen/xmen.png");
+    Equipe e2 = new Equipe(2, "JLA", "Super Héros DC", "jla/jla.png");
+    Equipe e3 = new Equipe(3, "X-Men", "Super Héros Mutants", "xmen/xmen.png");
+    Equipe e4 = new Equipe(3, "BTS-SIO2", "Super-Dev", "bts/Top_secret.png");
 
     ListView lvListe;
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         listeEquipe.add(e1);
         listeEquipe.add(e2);
         listeEquipe.add(e3);
+        listeEquipe.add(e4);
 
         lvListe = (ListView) findViewById(R.id.ListView1);
         
